@@ -54,6 +54,21 @@ export default function Find() {
             value={showSearch}
             onChange={(e) => setShowSearch(e.target.value)}
             fullWidth
+            sx={{
+    input: { color: 'white' }, 
+    label: { color: 'white' }, 
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'white',
+      },
+      '&:hover fieldset': {
+        borderColor: 'white',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'white',
+      },
+    },
+  }}
           />
           <Button variant="contained" color="primary" onClick={handleSearch}>
             <FontAwesomeIcon icon={faSearch} />
@@ -63,7 +78,7 @@ export default function Find() {
         <Grid container spacing={3}>
           {(isFiltered ? filteredMatches : matchData).map((item, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
-              <Card sx={{ height: '100%' }}>
+              <Card sx={{ minWidth: 275,margin:3, boxShadow: 5,border:'1px solid white', borderRadius: 2,backgroundColor:'rgba(0, 0, 0, 0.16)',color:'white'}}>
                 <CardContent>
                   <Typography variant="h5" gutterBottom>{item.sport_Name}</Typography>
                   <Typography>Date: {item.date || 'TBD'}</Typography>

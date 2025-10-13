@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "./Header";
@@ -48,7 +49,11 @@ export default function AdminPanel() {
   };
 
   return (
-    <div style={{ backgroundColor: "white" }}>
+<div
+  style={{
+    background: "linear-gradient(to right, rgb(0, 0, 0) 40%, rgb(157, 26, 26) 70%)"
+  }}
+>
       <Header />
 
       <Button

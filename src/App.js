@@ -11,24 +11,31 @@ import Login from "./Component/Login.jsx";
 import AdminPanel from "./Component/AdminPanel.jsx";
 import Getallpromp from "./Component/Getallpomp.jsx";
 import User from "./Component/User.jsx";
+import ImageAdminPanel from "./Component/Admin/ImageAdminPanel.jsx";
+import ProtectedRoute from "./Component/ProtectedRout.jsx";
+import Userpanel from "./Component/UserPanel/Userpanel.jsx";
+import MyMatches from "./Component/Matches/MyMatches.jsx";
 
 const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/Find" element={<Find />} />
-        <Route path="/Sign-up" element={<Signup />} />
-        <Route path="/Addtournament" element={<Add_tournament />} />
-        <Route path="/local" element={<Location />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Admin" element={<AdminPanel/>}/>
-        <Route path="/GetPomp" element={<Getallpromp/>}/>
-        <Route path="/User" element={<User/>}/>
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/contact" element={<Contact />} />
+  <Route path="/Find" element={<Find />} />
+  <Route path="/Sign-up" element={<Signup />} />
+  <Route path="/Addtournament" element={<Add_tournament />} />
+  <Route path="/local" element={<Location />} />
+  <Route path="/Login" element={<Login />} />
+ <Route path="/Admin" element={<AdminPanel />} />
+  <Route path="/GetPomp" element={<Getallpromp />} />
+  <Route path="/User" element={<User />} />
+  <Route path="/ImageAdmin" element={<ImageAdminPanel />} />
+  <Route path="/UserDadshboard" element={<Userpanel/>}/>
+  <Route path="/mymatches" element={<MyMatches/>}/>
 
-      </Routes>
+</Routes>
     </div>
   );
 };
