@@ -26,7 +26,6 @@ const App = () => {
   <Route path="/Find" element={<Find />} />
   <Route path="/Sign-up" element={<Signup />} />
   <Route path="/Addtournament" element={<Add_tournament />} />
-  <Route path="/local" element={<Location />} />
   <Route path="/Login" element={<Login />} />
  <Route path="/Admin" element={<AdminPanel />} />
   <Route path="/GetPomp" element={<Getallpromp />} />
