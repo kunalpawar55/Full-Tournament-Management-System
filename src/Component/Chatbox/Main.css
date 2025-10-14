@@ -1,0 +1,139 @@
+/* Main Chatbot Container */
+.chatbot-container {
+  width: 380px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+.chatbot-header {
+  background: linear-gradient(135deg, #0e3657, #1e5a89);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.chatbot-header h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.cancel-icon {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cancel-icon:hover {
+  transform: rotate(90deg);
+}
+
+/* Chat Messages Area */
+.chatbox {
+  background-color: #f9fafc;
+  padding: 15px;
+  height: 320px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.chatbox::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.user-msg {
+  align-self: flex-end;
+  background-color: #0078ff;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 18px 18px 0 18px;
+  max-width: 80%;
+  font-size: 0.95rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.bot-msg {
+  align-self: flex-start;
+  background-color: #e5e5e5;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 18px 18px 18px 0;
+  max-width: 80%;
+  font-size: 0.95rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.bot-msg.intro {
+  text-align: center;
+  align-self: center;
+  color: #555;
+  font-style: italic;
+}
+
+.midchat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 15px;
+  background: #f3f4f6;
+  border-top: 1px solid #ddd;
+}
+
+.midchat input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.midchat input:focus {
+  border-color: #0078ff;
+  box-shadow: 0 0 5px rgba(0, 120, 255, 0.3);
+}
+
+.midchat button {
+  background: #0078ff;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:  0.3s ease;
+}
+
+.midchat button:hover {
+  background: #005fcc;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
