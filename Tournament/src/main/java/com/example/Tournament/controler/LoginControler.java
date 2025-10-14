@@ -29,6 +29,10 @@ public class LoginControler {
 	private ResponseEntity<LoginEntity>createlog(@RequestBody LoginEntity log)
 	{
 		LoginEntity log1=login.createlog(log);
+		
+		
+		
+		
 		return  ResponseEntity.status(HttpStatus.CREATED).body(log1);
 		
 	}

@@ -10,80 +10,107 @@ import jakarta.persistence.Table;
 @Table
 @Entity
 public class LoginEntity {
- 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
-	@Column
-	private String Fullname;
-	@Column
-	private String DOB;
-	@Column
-	private String Email;
-	@Column
-    private long Number;
-	@Column
-    private String Password;
-	@Column
-	private String User;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getFullname() {
-		return Fullname;
-	}
-	public void setFullname(String fullname) {
-		Fullname = fullname;
-	}
-	public String getDOB() {
-		return DOB;
-	}
-	public void setDOB(String dOB) {
-		DOB = dOB;
-	}
-	public String getEmail() {
-		return Email;
-	}
-	public void setEmail(String email) {
-		Email = email;
-	}
-	public long getNumber() {
-		return Number;
-	}
-	public void setNumber(long number) {
-		Number = number;
-	}
-	public String getPassword() {
-		return Password;
-	}
-	public void setPassword(String password) {
-		Password = password;
-	}
-	public String getUser() {
-		return User;
-	}
-	public void setUser(String user) {
-		User = user;
-	}
-	public LoginEntity(String fullname, String dOB, String email, long number, String password, String user) {
-		super();
-		Fullname = fullname;
-		DOB = dOB;
-		Email = email;
-		Number = number;
-		Password = password;
-		User = user;
-	}
-	
-	public LoginEntity() {
-		// TODO Auto-generated constructor stub
-	}
-	@Override
-	public String toString() {
-		return "LoginEntity [id=" + id + ", Fullname=" + Fullname + ", DOB=" + DOB + ", Email=" + Email + ", Number="
-				+ Number + ", Password=" + Password + ", User=" + User + "]";
-	}	
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+
+    @Column(nullable = false)
+    private String fullName;
+
+    @Column(nullable = false)
+    private String dob;
+
+    @Column(nullable = false, unique = true)
+    private String email;
+
+    @Column(nullable = false)
+    private long number;
+
+    @Column(nullable = false)
+    private String password;
+
+    @Column(nullable = false)
+    private String user; 
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public long getNumber() {
+        return number;
+    }
+
+    public void setNumber(long number) {
+        this.number = number;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public LoginEntity(String fullName, String dob, String email, long number, String password, String user) {
+        this.fullName = fullName;
+        this.dob = dob;
+        this.email = email;
+        this.number = number;
+        this.password = password;
+        this.user = user;
+    }
+
+    public LoginEntity() {
+    }
+
+    @Override
+    public String toString() {
+        return "LoginEntity{" +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
+                ", dob='" + dob + '\'' +
+                ", email='" + email + '\'' +
+                ", number=" + number +
+                ", password='" + password + '\'' +
+                ", user='" + user + '\'' +
+                '}';
+    }
 }

@@ -12,7 +12,7 @@ import com.example.Tournament.servise.LoginServiceclass;
 
 @RestController
 @RequestMapping("/Admin")
-public class AdminController {
+public class AdminController {	
 	@Autowired
 	LoginServiceclass login;
 	

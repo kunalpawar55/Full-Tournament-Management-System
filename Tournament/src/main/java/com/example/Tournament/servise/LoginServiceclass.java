@@ -14,8 +14,9 @@ public class LoginServiceclass implements LoginServise {
 	@Autowired
 	private Loginrepo logrepo;
 	
+	
 	public LoginEntity createlog(LoginEntity log) {
-
+    
 		    
 		return logrepo.save(log);
 	}
@@ -28,7 +29,6 @@ public class LoginServiceclass implements LoginServise {
 
 	@Override
 	public LoginEntity putlog(Integer id, LoginEntity log) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	

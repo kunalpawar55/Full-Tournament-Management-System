@@ -22,7 +22,7 @@ public class tournament_Implimentation implements Servise {
     }
 
     @Override
-    public List<tournamentEntity> getall() {
+    public List<tournamentEntity> getall() { 
         return repo.findAll();
     }
 
@@ -66,6 +66,10 @@ public class tournament_Implimentation implements Servise {
         }
         repo.deleteById(id);
     }
-    
+     
+    public List<tournamentEntity> findbyemail(String email) {
+        return repo.findByEmail(email);
+    }
+
  
 }
